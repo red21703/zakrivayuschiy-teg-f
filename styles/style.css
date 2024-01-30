@@ -154,16 +154,19 @@
   font-weight: var(--font-weight-header);
   font-size: 14px;
   line-height: 14px;
-  text-transform: uppercase;
-
+  text-transform: lowercase;
   text-shadow: 1px 1px 0 var(--color-watermark-border),
     1px -1px 0 var(--color-watermark-border),
     -1px 1px 0 var(--color-watermark-border),
     -1px -1px 0 var(--color-watermark-border);
-  inset-block-start: 25px;
-  inset-inline-end: 25px;
+  inset-block-start: 20px;
+  inset-inline-end: 10px;
   mix-blend-mode: hard-light;
 }
+.uppercase {
+  text-transform: uppercase;
+}
+
 @supports (
   (text-stroke: 1px var(--color-watermark-border)) or
     (-webkit-text-stroke: 1px var(--color-watermark-border))
@@ -341,9 +344,53 @@ dialog[open] {
   block-size: 38px;
 }
 
+.blur {
+  filter: blur(3px);
+}
+
+.brightness {
+  filter: brightness(30%);
+}
+
+.contrast {
+  filter: contrast(250%);
+}
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(0.25turn);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.sepia {
+  filter: sepia(0.6);
+}
+
+.grayscale.sepia {
+  filter: blur(5px) sepia(0.6);
+}
+
 @media (width >= 376px) {
-  .card__title {
-    padding: 3px 10px;
+  .card__watermark {
+    inset-block-start: 25px;
+    inset-inline-end: 25px;
+  }
+  li:last-of-type{
+    .card__content{
+        padding: 25px;
+    }
+  }
+  .card__content {
+    padding: 25px 23px;
+  }
+  .card__content-buttons {
+    gap: 7px;
   }
   .main__save-wrapper {
     margin-block-end: 103px;

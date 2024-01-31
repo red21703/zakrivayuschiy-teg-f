@@ -15,18 +15,19 @@
   --background-color: #000;
   --background-image: repeating-linear-gradient(
       90deg,
-      #000000,
-      #000000 2px,
+      #000 0,
+      #000 2px,
       transparent 2px,
       transparent 4px
     ),
     repeating-linear-gradient(
       180deg,
-      #007f0c,
-      #004306 2px,
+      #000 0,
+      #000 2px,
       transparent 2px,
       transparent 4px
-    );
+    ),
+    repeating-linear-gradient(180deg, #007f0c 0.01%, #004306);
 
   --button-text-color: #00cc14;
 

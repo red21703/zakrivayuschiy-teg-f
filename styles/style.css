@@ -68,7 +68,6 @@
 .theme-menu__item {
   border: none;
   font-size: 14px;
-  
 }
 
 .theme-menu__button {
@@ -95,8 +94,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   opacity: 0.6;
   animation: oscillate 0.5s infinite ease-in-out alternate;
 }
@@ -120,13 +119,12 @@
   transform: scaleX(1);
 }
 
-
 .main {
   display: flex;
   flex-direction: column;
   align-items: start;
+  align-items: center;
   gap: 49px;
-  align-items: center
 }
 
 .card {
@@ -146,8 +144,8 @@
 
 .card__poster {
   position: relative;
-  border-block: 2px solid var(--color-main);
   margin: 0;
+  border-block: 2px solid var(--color-main);
 }
 
 .card__poster-image {
@@ -196,11 +194,11 @@
   line-height: 21px;
 }
 
-.card__content .card__content-paragraph:not(:last-of-type) {
+.card__content-paragraph:not(:last-of-type) {
   margin-block-end: 27px;
 }
 
-.card__content .card__content-paragraph:last-of-type {
+.card__content-paragraph:last-of-type {
   margin-block-end: 25px;
 }
 
@@ -210,9 +208,9 @@
   gap: 3px;
 }
 
-.main .card:last-of-type{
-  .card__content{
-      padding: 25px 24px;
+.card:last-of-type {
+  .card__content {
+    padding: 25px 24px;
   }
   .card__content-buttons {
     gap: 5px;
@@ -335,7 +333,7 @@
   max-inline-size: 341px;
 }
 
-dialog[open] {
+.dialog[open] {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -353,9 +351,9 @@ dialog[open] {
 
 .dialog__icon {
   flex-shrink: 0;
+  fill: var(--color-main);
   inline-size: 39px;
   block-size: 39px;
-  fill: var(--color-main);
 }
 
 .dialog__button {
@@ -400,9 +398,9 @@ dialog[open] {
     inset-block-start: 25px;
     inset-inline-end: 25px;
   }
-  .main .card:last-of-type{
-    .card__content{
-        padding: 25px;
+  .main .card:last-of-type {
+    .card__content {
+      padding: 25px;
     }
   }
   .card__content {

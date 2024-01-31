@@ -6,13 +6,8 @@
 */
 
 :root.theme-dark {
-  --font-family-main: "Inter", sans-serif;
-  --font-family-accent: "PressStart2P", serif;
-
-  --font-size-main: 18px;
   --font-weight-title: 785;
   --font-weight-text: 465;
-  --font-weight-header: 400;
 
   --color-main: #00cc14;
   --color-watermark-border: #000;
@@ -21,18 +16,19 @@
   --background-color: #000;
   --background-image: repeating-linear-gradient(
       90deg,
-      #000000,
-      #000000 2px,
+      #000 0,
+      #000 2px,
       transparent 2px,
       transparent 4px
     ),
     repeating-linear-gradient(
       180deg,
-      #007f0c,
-      #004306 2px,
+      #000 0,
+      #000 2px,
       transparent 2px,
       transparent 4px
-    );
+    ),
+    repeating-linear-gradient(180deg, #007f0c 0.01%, #004306);
 
   --button-text-color: #00cc14;
 
@@ -42,21 +38,24 @@
 }
 
 :root.theme-light {
+  --font-weight-title: 700;
+  --font-weight-text: 400;
+
   --color-main: #000;
   --color-watermark-border: #fff;
   --color-watermark-text: #000;
   --background-color: #fff;
   --background-image: repeating-linear-gradient(
       90deg,
-      #d3d3d3,
+      #d3d3d3 0,
       #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
     repeating-linear-gradient(
       180deg,
-      #e7e7e7,
-      #1a1a1a 2px,
+      #d3d3d3 0,
+      #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
@@ -70,26 +69,28 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --font-weight-title: 700;
+    --font-weight-text: 400;
+
     --color-main: #000;
     --color-watermark-border: #fff;
     --color-watermark-text: #000;
     --background-color: #fff;
     --background-image: repeating-linear-gradient(
         90deg,
-        #d3d3d3,
+        #d3d3d3 0,
         #d3d3d3 2px,
         transparent 2px,
         transparent 4px
       ),
       repeating-linear-gradient(
         180deg,
-        #e7e7e7,
-        #1a1a1a 2px,
+        #d3d3d3 0,
+        #d3d3d3 2px,
         transparent 2px,
         transparent 4px
       ),
       repeating-linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
-
     --button-text-color: #fff;
     --like-main-body-color: none;
     --like-contour-color: #000000;
